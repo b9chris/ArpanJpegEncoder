@@ -19,6 +19,20 @@ The image here is your System.Drawing.Image. The path can be whatever you like. 
 
 The encoder is worse in terms of quality for size than common encoders out there like Gimp or Photoshop, but can produce much higher quality files than the built-in .Net encoder. A quantizer value of 100 gets pretty good quality perhaps comparable to Photoshop's 30% (much higher file size however), and a value of 10 gets near-lossless quality with file sizes larger than Photoshop is capable of producing at 100%.
 
+This library has a known issue where in some environments it throws no Exceptions, but simply draws a black image. It's not clear what causes this to happen in some environments and not in others.
+
+However, it appears better JPEG compression can be achieved by simply wrapping a command-line call to one of the following libraries:
+
+libjpeg: http://sourceforge.net/projects/libjpeg/
+
+jpegtran: http://jpegclub.org/
+
+jpegoptim: http://freecode.com/projects/jpegoptim
+
+Google PageSpeed SDK: https://developers.google.com/speed/pagespeed/psol
+
+So future focus will be on assessing the best choice among open source implementations and wrapping that, rather than fixing issues with this library.
+
 
 ##License
 The code is licensed under the Code Project License:

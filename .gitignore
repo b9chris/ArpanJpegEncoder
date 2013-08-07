@@ -2,3 +2,7 @@
 /JpegEncoderCore/bin
 /JpegEncoderUI/bin
 /JpegEncoderUI/obj
+
+/JpegEncoder.v11.suo
+/JpegEncoderCore/JpegEncoderCore.csproj.user
+/JpegEncoderUI/JpegEncoderUI.csproj.user
